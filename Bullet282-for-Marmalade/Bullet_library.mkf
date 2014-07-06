@@ -1,0 +1,337 @@
+# (Bullet - library)
+display_name "Libs/Bullet"
+
+options
+{
+	arm-cpu=6z
+	arm-float-abi=hard
+
+	optimise-speed
+}
+
+includepath
+{
+	Bullet
+	Bullet/Extras
+	Bullet/Extras/ConvexDecomposition
+	Bullet/Extras/Serialize/BulletWorldImporter
+}
+
+library
+{
+	".,Bullet"
+}
+
+files
+{
+	(Bullet)
+	btBulletCollisionCommon.h
+	btBulletDynamicsCommon.h
+	Bullet-C-Api.h
+
+	[Bullet/BulletCollision/BroadphaseCollision]
+	(Bullet/BulletCollision/BroadphaseCollision)
+	#
+	btAxisSweep3.h
+	btDbvtBroadphase.h
+	btSimpleBroadphase.h
+	btMultiSapBroadphase.h
+	btDbvt.h
+	btOverlappingPairCallback.h
+	btDispatcher.h
+	btCollisionAlgorithm.h
+	btBroadphaseProxy.h
+	btOverlappingPairCache.h
+	btBroadphaseInterface.h
+	btQuantizedBvh.h
+	
+	[Bullet/BulletCollision/CollisionDispatch]
+	(Bullet/BulletCollision/CollisionDispatch)
+	#
+	btCollisionObject.h
+	btCollisionObjectWrapper.h
+	btGhostObject.h
+	btSphereTriangleCollisionAlgorithm.h
+	btBoxBoxCollisionAlgorithm.h
+	btBox2dBox2dCollisionAlgorithm.h
+	btConvexPlaneCollisionAlgorithm.h
+	btEmptyCollisionAlgorithm.h
+	btCollisionCreateFunc.h
+	btConvexConvexAlgorithm.h
+	btConvex2dConvex2dAlgorithm.h
+	btBoxBoxDetector.h
+	btCollisionDispatcher.h
+	SphereTriangleDetector.h
+	btConvexConcaveCollisionAlgorithm.h
+	btUnionFind.h
+	btCompoundCollisionAlgorithm.h
+	btHashedSimplePairCache.h
+	btCompoundCompoundCollisionAlgorithm.h
+	btSimulationIslandManager.h
+	btDefaultCollisionConfiguration.h
+	btCollisionWorld.h
+	btInternalEdgeUtility.h
+	btManifoldResult.h
+	btSphereSphereCollisionAlgorithm.h
+	btSphereBoxCollisionAlgorithm.h
+	btCollisionConfiguration.h
+
+	[Bullet/BulletCollision/CollisionShapes]
+	(Bullet/BulletCollision/CollisionShapes)
+	#
+	btConvexShape.h
+	btConvex2dShape.h
+	btTriangleCallback.h
+	btPolyhedralConvexShape.h
+	btMultimaterialTriangleMeshShape.h
+	btCompoundShape.h
+	btBoxShape.h
+	btBox2dShape.h
+	btMultiSphereShape.h
+	btCollisionMargin.h
+	btConcaveShape.h
+	btConvexTriangleMeshShape.h
+	btEmptyShape.h
+	btUniformScalingShape.h
+	btScaledBvhTriangleMeshShape.h
+	btMaterial.h
+	btTriangleIndexVertexArray.h
+	btTriangleInfoMap.h
+	btSphereShape.h
+	btConvexPointCloudShape.h
+	btCapsuleShape.h
+	btHeightfieldTerrainShape.h
+	btCollisionShape.h
+	btStaticPlaneShape.h
+	btBvhTriangleMeshShape.h
+	btTriangleMeshShape.h
+	btStridingMeshInterface.h
+	btTriangleMesh.h
+	btTriangleBuffer.h
+	btShapeHull.h
+	btMinkowskiSumShape.h
+	btOptimizedBvh.h
+	btTriangleShape.h
+	btTriangleIndexVertexMaterialArray.h
+	btCylinderShape.h
+	btTetrahedronShape.h
+	btConvexInternalShape.h
+	btConeShape.h
+	btConvexHullShape.h
+
+	[Bullet/BulletCollision/Gimpact]
+	(Bullet/BulletCollision/Gimpact)
+	#
+	gim_memory.h
+	gim_clip_polygon.h
+	gim_bitset.h
+	gim_linear_math.h
+	btGeometryOperations.h
+	btGImpactCollisionAlgorithm.h
+	btGImpactBvh.h
+	gim_box_set.h
+	gim_array.h
+	btGImpactShape.h
+	btTriangleShapeEx.h
+	btClipPolygon.h
+	gim_box_collision.h
+	gim_tri_collision.h
+	gim_geometry.h
+	gim_math.h
+	btQuantization.h
+	btGImpactQuantizedBvh.h
+	gim_geom_types.h
+	gim_basic_geometry_operations.h
+	gim_contact.h
+	gim_hash_table.h
+	gim_radixsort.h
+	btGImpactMassUtil.h
+	btGenericPoolAllocator.h
+	btBoxCollision.h
+	btContactProcessing.h
+
+	[Bullet/BulletCollision/NarrowPhaseCollision]
+	(Bullet/BulletCollision/NarrowPhaseCollision)
+	#
+	btGjkEpaPenetrationDepthSolver.h
+	btVoronoiSimplexSolver.h
+	btConvexCast.h
+	btGjkEpa2.h
+	btGjkPairDetector.h
+	btMinkowskiPenetrationDepthSolver.h
+	btPointCollector.h
+	btConvexPenetrationDepthSolver.h
+	btSimplexSolverInterface.h
+	btRaycastCallback.h
+	btContinuousConvexCollision.h
+	btSubSimplexConvexCast.h
+	btPersistentManifold.h
+	btGjkConvexCast.h
+	btManifoldPoint.h
+	btDiscreteCollisionDetectorInterface.h
+
+	[Bullet/BulletDynamics/Character]
+	(Bullet/BulletDynamics/Character)
+	#
+	btKinematicCharacterController.h
+	btCharacterControllerInterface.h
+	
+	[Bullet/BulletDynamics/ConstraintSolver]
+	(Bullet/BulletDynamics/ConstraintSolver)
+	#
+	btSolverBody.h
+	btConstraintSolver.h
+	btConeTwistConstraint.h
+	btTypedConstraint.h
+	btContactSolverInfo.h
+	btContactConstraint.h
+	btPoint2PointConstraint.h
+	btJacobianEntry.h
+	btSolverConstraint.h
+	btSequentialImpulseConstraintSolver.h
+	btGearConstraint.h
+	btGeneric6DofConstraint.h
+	btGeneric6DofSpringConstraint.h
+	btSliderConstraint.h
+	btHingeConstraint.h
+	btHinge2Constraint.h
+	btUniversalConstraint.h
+	btSolve2LinearConstraint.h
+	
+	[Bullet/BulletDynamics/Dynamics]
+	(Bullet/BulletDynamics/Dynamics)
+	#
+	btActionInterface.h
+	btSimpleDynamicsWorld.h
+	btRigidBody.h
+	btDiscreteDynamicsWorld.h
+	btDynamicsWorld.h
+	
+	[Bullet/BulletDynamics/Featherstone]
+	(Bullet/BulletDynamics/Featherstone)
+	#
+	btMultiBodyJointMotor.h
+	btMultiBodyJointLimitConstraint.h
+	btMultiBody.h
+	btMultiBodyConstraintSolver.h
+	btMultiBodyDynamicsWorld.h
+	btMultiBodyLink.h
+	btMultiBodyLinkCollider.h
+	btMultiBodySolverConstraint.h
+	btMultiBodyConstraint.h
+	btMultiBodyPoint2Point.h
+	btMultiBodyConstraint.h
+	btMultiBodyPoint2Point.h
+
+	[Bullet/BulletDynamics/MLCPSolvers]
+	(Bullet/BulletDynamics/MLCPSolvers)
+	#
+	btDantzigLCP.h
+	btDantzigSolver.h
+	btMLCPSolver.h
+	btMLCPSolverInterface.h
+	btPATHSolver.h
+	btSolveProjectedGaussSeidel.h
+
+	[Bullet/BulletDynamics/Vehicle]
+	(Bullet/BulletDynamics/Vehicle)
+	#
+	btVehicleRaycaster.h
+	btRaycastVehicle.h
+	btWheelInfo.h
+	
+	[Bullet/BulletMultiThreaded]
+	(Bullet/BulletMultiThreaded)
+	#
+	SpuSampleTask/SpuSampleTask.h
+	PpuAddressSpace.h
+	SpuSampleTaskProcess.h
+	SequentialThreadSupport.h
+	PlatformDefinitions.h
+	Win32ThreadSupport.h
+	SpuContactManifoldCollisionAlgorithm.h
+	btThreadSupportInterface.h
+	SpuNarrowPhaseCollisionTask/SpuGatheringCollisionTask.h
+	SpuNarrowPhaseCollisionTask/SpuConvexPenetrationDepthSolver.h
+	SpuNarrowPhaseCollisionTask/SpuPreferredPenetrationDirections.h
+	SpuNarrowPhaseCollisionTask/SpuCollisionShapes.h
+	SpuNarrowPhaseCollisionTask/SpuLocalSupport.h
+	SpuNarrowPhaseCollisionTask/SpuMinkowskiPenetrationDepthSolver.h
+	SpuNarrowPhaseCollisionTask/SpuContactResult.h
+	SpuGatheringCollisionDispatcher.h
+	SpuFakeDma.h
+	SpuSync.h
+	SpuCollisionObjectWrapper.h
+	SpuDoubleBuffer.h
+	SpuCollisionTaskProcess.h
+	PosixThreadSupport.h
+	SpuLibspe2Support.h
+	SpuNarrowPhaseCollisionTask/boxBoxDistance.h
+	SpuNarrowPhaseCollisionTask/Box.h
+
+	[Bullet/BulletSoftBody]
+	(Bullet/BulletSoftBody)
+	#
+	btSparseSDF.h
+	btSoftRigidCollisionAlgorithm.h
+	btSoftBodyRigidBodyCollisionConfiguration.h
+	btSoftBody.h
+	btSoftSoftCollisionAlgorithm.h
+	btSoftBodyInternals.h
+	btSoftBodyConcaveCollisionAlgorithm.h
+	btSoftRigidDynamicsWorld.h
+	btSoftBodyHelpers.h
+	btSoftBodyRigidBodyCollisionConfiguration.h
+	btSoftBodyInternals.h
+	btSoftBodyConcaveCollisionAlgorithm.h
+	btSoftSoftCollisionAlgorithm.h
+	btSoftBody.h
+	btSoftBodyHelpers.h
+	btSparseSDF.h
+	btSoftRigidCollisionAlgorithm.h
+	btSoftRigidDynamicsWorld.h
+
+	[Bullet/LinearMath]
+	(Bullet/LinearMath)
+	#
+	btHashMap.h
+	btConvexHull.h
+	btAabbUtil2.h
+	btGeometryUtil.h
+	btQuadWord.h
+	btPoolAllocator.h
+	btPolarDecomposition.h
+	btScalar.h
+	btMinMax.h
+	btVector3.h
+	btList.h
+	btStackAlloc.h
+	btMatrix3x3.h
+	btMotionState.h
+	btAlignedAllocator.h
+	btQuaternion.h
+	btAlignedObjectArray.h
+	btQuickprof.h
+	btSerializer.h
+	btTransformUtil.h
+	btTransform.h
+	btDefaultMotionState.h
+	btIDebugDraw.h
+	btRandom.h
+
+	[Bullet/Extras/Serialize/BulletFileLoader]
+	(Bullet/Extras/Serialize/BulletFileLoader)
+	#
+	bChunk.h
+	bCommon.h
+	bDefines.h
+	bDNA.h
+	bFile.h
+	btBulletFile.h
+
+	[Bullet/Extras/Serialize/BulletWorldImporter]
+	(Bullet/Extras/Serialize/BulletWorldImporter)
+	#
+	btBulletWorldImporter.h
+	btWorldImporter.h
+}

@@ -1,0 +1,18 @@
+
+options
+{
+	lib
+
+##	strict
+
+	arm-cpu=6z
+	arm-float-abi=hard
+
+	optimise-speed
+}
+
+subproject Bullet
+
+files
+{
+}

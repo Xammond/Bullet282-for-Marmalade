@@ -1,0 +1,22 @@
+#!/usr/bin/env mkb
+
+files
+{
+    (source)
+    [source]
+    IwGx_demo.cpp
+}
+
+subprojects
+{
+	iwgx
+	"C:/Marmalade/7.3/examples/ExamplesCore"
+
+	"Bullet282-for-Marmalade/Bullet_library"
+}
+
+assets
+{
+    (data)
+    textures/testTexture.bmp
+}
